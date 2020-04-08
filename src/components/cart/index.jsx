@@ -21,6 +21,14 @@ const items = [
     }
 ];
 
+const formatPrice = price => {
+    return `$${(price * 0.01).toFixed(2)}`
+}
+
+const totalPrice = items => {
+    return items.reduce((acc, item) => acc + item.price * item.quantity, 0.0)
+}
+
 export default function Cart({stripeToken}) {
     return (
         <div>
@@ -47,10 +55,14 @@ export default function Cart({stripeToken}) {
                                     />
                                 </td>
                                 <td>{item.quantity}</td>
-                                <td>{item.price}</td>
+                                <td>{formatPrice(item.price)}</td>
                             </tr>
                         ))
                     }
+                    <tr>
+                        <td style={{textAlign: "right"}} colspan={3}>Total:</td>
+                <td>{formatPrice(totalPrice(items))}</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
