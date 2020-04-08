@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 const items = [
     {
@@ -30,6 +30,21 @@ const totalPrice = items => {
 }
 
 export default function Cart({stripeToken}) {
+    const [stripe, setStripe] = useState(null);
+
+    useEffect(() => {
+        if(window.Stripe) setStripe(window.Stripe(stripeToken))
+    }, [stripeToken]);
+    
+    const checkout = () => {
+        stripe.redirectToCheckout({
+            items: items.map(item => ({
+                quantity: item.quantity,
+                sku: item.sku
+            }))
+        })
+    }
+
     return (
         <div>
             <table>
@@ -61,7 +76,13 @@ export default function Cart({stripeToken}) {
                     }
                     <tr>
                         <td style={{textAlign: "right"}} colspan={3}>Total:</td>
-                <td>{formatPrice(totalPrice(items))}</td>
+                        <td>{formatPrice(totalPrice(items))}</td>
+                    </tr>
+
+                    <tr>
+                        <td style={{textAlign: "right"}} colspan={4}>
+                            <button onClick={checkout}>Checkout Now with Stripe</button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
