@@ -20,7 +20,7 @@ export default function Cart({stripeToken}) {
     
     const checkout = () => {
         stripe.redirectToCheckout({
-            items: items.map(item => ({
+            items: ctx.items.map(item => ({
                 quantity: item.quantity,
                 sku: item.sku
             })),
@@ -43,7 +43,7 @@ export default function Cart({stripeToken}) {
 
                 <tbody>
                     {
-                        items.map(item => (
+                        ctx.items.map(item => (
                             <tr>
                                 <td>{item.name}</td>
                                 <td>
@@ -60,7 +60,7 @@ export default function Cart({stripeToken}) {
                     }
                     <tr>
                         <td style={{textAlign: "right"}} colspan={3}>Total:</td>
-                        <td>{formatPrice(totalPrice(items))}</td>
+                        <td>{formatPrice(totalPrice(ctx.items))}</td>
                     </tr>
 
                     <tr>
