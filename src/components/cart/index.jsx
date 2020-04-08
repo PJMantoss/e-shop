@@ -37,7 +37,18 @@ export default function Cart({stripeToken}) {
                 <tbody>
                     {
                         items.map(item => (
-                            <tr></tr>
+                            <tr>
+                                <td>{item.name}</td>
+                                <td>
+                                    <img 
+                                        src={`/images/${item.sku}.jpg`} 
+                                        alt={item.name}
+                                        width={100}
+                                    />
+                                </td>
+                                <td>{item.quantity}</td>
+                                <td>{item.price}</td>
+                            </tr>
                         ))
                     }
                 </tbody>
