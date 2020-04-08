@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import products from '../data/products';
+import products from '../../data/products';
 
 import Cart from '../cart';
 
@@ -30,8 +30,7 @@ export default function Store() {
                     </div>
                 </div>
             ))}
-
-            <Cart stripeToken="pk_test_YO4hCduILG2Vkvaecq4Th13V007ILyXZUw" />
+            <Cart stripeToken="pk_test_YO4hCduILG2Vkvaecq4Th13V007ILyXZUw"/>
         </div>
     )
 }

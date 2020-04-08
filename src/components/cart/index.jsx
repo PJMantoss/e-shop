@@ -54,7 +54,7 @@ export default function Cart({stripeToken}) {
                                     />
                                 </td>
                                 <td>{item.quantity}</td>
-                                <td>{formatPrice(item.price)}</td>
+                                <td>{formatPrice(item.price * item.quantity)}</td>
                             </tr>
                         ))
                     }
