@@ -41,7 +41,9 @@ export default function Cart({stripeToken}) {
             items: items.map(item => ({
                 quantity: item.quantity,
                 sku: item.sku
-            }))
+            })),
+            successUrl: 'https://your-website.com/success',
+            cancelUrl: 'https://your-website.com/canceled'
         })
     }
 
