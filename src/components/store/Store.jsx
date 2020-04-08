@@ -4,10 +4,10 @@ import products from '../../data/products';
 
 import Cart from '../cart';
 
-import {CardContext} from '../cart/context'
+import {CartContext} from '../cart/context'
 
 export default function Store() {
-    const Cardctx = useContext(CardContext);
+    const Cartctx = useContext(CartContext);
 
     return (
         <div>
@@ -23,7 +23,7 @@ export default function Store() {
                     <div>{product.name}</div>
                     <div>
                         <button 
-                            onClick={() => Cardctx.addToCart(product)}
+                            onClick={() => Cartctx.addToCart(product)}
                         >
                             Add to Cart
                         </button>
