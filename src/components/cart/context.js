@@ -28,6 +28,7 @@ export default function CartProvider({children}) {
         <CartContext.Provider 
             value={{
                 items: itemsWithQuantities(items), 
+                itemsCount: items.length,
                 addToCart
             }}
         >

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
-import './layout.css';
+import './TopBar.css';
 import { Link } from 'react-router-dom';
-import CartContext from '../cart/context';
+import {CartContext} from '../cart/context';
 
 export default function TopBar() {
     const cartCtx = useContext(CartContext);
@@ -10,8 +10,8 @@ export default function TopBar() {
         <div className="layout top-bar">
             <div className="wrapper">
                 <div className="section">My Shop</div>
-                <div>
-                    <Link to="/">Products</Link>
+                <div className="section">
+                    <Link to="/">Products</Link> | {" "}
                     <Link to="/view-cart">View Cart ({numItems})</Link>
                 </div>
             </div>
