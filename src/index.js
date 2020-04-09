@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 import ProductsPage from './pages/products/ProductsPage';
 import ViewCartPage from './pages/view-cart/ViewCartPage';
 import './index.css'
@@ -8,13 +8,13 @@ import './index.css'
 import CartProvider from './components/cart/context';
 
 ReactDOM.render(
-  <BrowserRouter>
+  <HashRouter>
     <CartProvider>
       <Switch>
           <Route exact path="/" component={ProductsPage} />
           <Route path="/view-cart" component={ViewCartPage} />
       </Switch>
     </CartProvider>
-  </BrowserRouter>,
+  </HashRouter>,
   document.getElementById('root')
 );
