@@ -10,6 +10,7 @@ ReactDOM.render(
   <CartProvider>
       <Switch>
          <Route exact path="/" component={ProductsPage} />
+         <Route path="/view-cart" component={ViewCartPage} />
       </Switch>
   </CartProvider>,
   document.getElementById('root')
