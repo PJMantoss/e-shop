@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Baloo+Paaji+2:wght@400;500&family=Ubuntu&display=swap');
+
+table {
+    border-collapse: collapse;
+    display: table;
+    border-color: green;
+    border-spacing: 2px;
+}
+
+table button {
+    background: green;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    border: none;
+    border-radius: 6px;
+    height: 30px;
+    width: 180px;
+    margin-bottom: 10px;
+}
+
+table button:hover {
+    background: yellow;
+    color: black;
+}

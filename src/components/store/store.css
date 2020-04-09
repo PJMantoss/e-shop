@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Acme&family=Ubuntu&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Baloo+Paaji+2:wght@400;500&family=Ubuntu&display=swap');
 .main-store {
     display: inline-flex;
     padding: 0 15px;
@@ -23,6 +22,7 @@
 }
 
 .store-div .product-name {
+    font-family: 'Baloo Paaji 2', cursive;
     text-align: justify;
     width: 90%;
     margin-bottom: 7px;

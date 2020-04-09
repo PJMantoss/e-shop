@@ -2,6 +2,8 @@ import React, { useState, useEffect, useContext } from 'react';
 
 import {CartContext} from './context'
 
+import './cart.css';
+
 const formatPrice = price => {
     return `$${(price * 0.01).toFixed(2)}`
 }
@@ -30,7 +32,7 @@ export default function Cart({stripeToken}) {
     }
 
     return (
-        <div>
+        <div className="table-wrapper">
             <table>
                 <thead>
                     <tr>

@@ -8,8 +8,17 @@
     border: 1px solid gray;
 }
 
+.wrapper h1{
+    font-family: 'Acme', sans-serif;
+    color: rgb(4, 4, 46);
+}
+
 @media(max-width: 700px){
     .wrapper {
         width: 80%;
+    }
+
+    .wrapper h1 {
+        font-size: 26px;
     }
 }
