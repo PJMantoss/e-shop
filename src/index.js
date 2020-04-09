@@ -7,11 +7,13 @@ import ViewCartPage from './pages/view-cart/ViewCartPage';
 import CartProvider from './components/cart/context';
 
 ReactDOM.render(
-  <CartProvider>
+  <BrowserRouter>
+    <CartProvider>
       <Switch>
-         <Route exact path="/" component={ProductsPage} />
-         <Route path="/view-cart" component={ViewCartPage} />
+          <Route exact path="/" component={ProductsPage} />
+          <Route path="/view-cart" component={ViewCartPage} />
       </Switch>
-  </CartProvider>,
+    </CartProvider>
+  </BrowserRouter>,
   document.getElementById('root')
 );
