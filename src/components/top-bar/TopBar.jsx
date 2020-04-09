@@ -5,10 +5,10 @@ import {CartContext} from '../cart/context';
 
 export default function TopBar() {
     const cartCtx = useContext(CartContext);
-    const numItems = cartCtx.items.length;
+    const numItems = cartCtx.itemsCount;
     return (
         <div className="layout top-bar">
-            <div className="wrapper">
+            <div className="bar-wrapper">
                 <div className="section">My Shop</div>
                 <div className="section">
                     <Link to="/">Products</Link> | {" "}
