@@ -1,10 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Baloo+Paaji+2:wght@400;500&family=Ubuntu&display=swap');
 
-table {
-    border-collapse: collapse;
-    display: table;
-    border-color: green;
-    border-spacing: 2px;
+table .details td {
+    align-items: center;
 }
 
 table button {

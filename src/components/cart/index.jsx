@@ -32,7 +32,7 @@ export default function Cart({stripeToken}) {
     }
 
     return (
-        <div className="table-wrapper">
+        <div>
             <table>
                 <thead>
                     <tr>
@@ -46,7 +46,7 @@ export default function Cart({stripeToken}) {
                 <tbody>
                     {
                         ctx.items.map(item => (
-                            <tr>
+                            <tr className="details">
                                 <td>{item.name}</td>
                                 <td>
                                     <img 
