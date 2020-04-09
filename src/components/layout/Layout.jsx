@@ -1,4 +1,5 @@
 import React from 'react'
+import './layout.css'
 
 export default function Layout({children, title}) {
     document.getElementsByTagName("title")[0].innerHTML = title;
