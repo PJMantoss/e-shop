@@ -50,7 +50,7 @@ export default function Cart({stripeToken}) {
                                 <td>{item.name}</td>
                                 <td>
                                     <img 
-                                        src={`/images/${item.sku}.jpg`} 
+                                        src={`./images/${item.sku}.jpg`} 
                                         alt={item.name}
                                         width={100}
                                     />

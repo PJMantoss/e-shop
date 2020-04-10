@@ -15,7 +15,7 @@ export default function Store() {
                 <div className="store-div">
                     <div className="image">
                         <img 
-                            src={`/images/${product.sku}.jpg`} 
+                            src={`./images/${product.sku}.jpg`} 
                             alt={product.name}
                             width={100}
                         />
