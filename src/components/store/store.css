@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Baloo+Paaji+2:wght@400;500&family=Ubuntu&display=swap');
 .main-store {
-    display: inline-flex;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     padding: 0 15px;
 }
+
 @media(max-width: 800px){
     .main-store {
         display: flex;
@@ -14,7 +17,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 10px 15px 10px;
+    width: calc(100% / 4);
+    margin: 25px 10px;
 }
 
 .store-div .image {
@@ -51,5 +55,9 @@
 
     .store-div .btn-div button {
         width: 95px;
+    }
+
+    .store-div {
+        width: auto;
     }
 }
